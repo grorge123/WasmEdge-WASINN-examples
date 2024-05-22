@@ -20,7 +20,7 @@ fn get_output_from_context(context: &GraphExecutionContext) -> Vec<u8> {
     get_data_from_context(context, 0)
 }
 fn main() {
-        let tokenizer_path = "neural-chat-tokenizer.json";
+        let tokenizer_path = "llama-tokenizer.json";
         let prompt = "Once upon a time, there existed a little girl,";
         let args: Vec<String> = env::args().collect();
         let model_name: &str = &args[1];
@@ -35,7 +35,7 @@ fn main() {
             tensor_data.extend_from_slice(&bytes);
         }
         let graph = GraphBuilder::new(GraphEncoding::NeuralSpeed, ExecutionTarget::AUTO)
-        .config(serde_json::to_string(&json!({"model_type": "mistral"})).expect("Failed to serialize options"))
+        .config(serde_json::to_string(&json!({"model_type": "llama"})).expect("Failed to serialize options"))
         .build_from_cache(model_name)
         .expect("Failed to build graph");
         let mut context = graph
