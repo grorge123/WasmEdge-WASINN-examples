@@ -33,6 +33,6 @@ ENV TEST_TIMES=1
 
 RUN mv /WasmEdge-WASINN-examples/wasmedge-neuralspeed/benchmark/run.sh /
 
-ADD . /output
+RUN mkdir /output
 
 CMD ["bash", "/run.sh"]
