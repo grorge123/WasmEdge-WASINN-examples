@@ -20,7 +20,7 @@ fn get_output_from_context(context: &GraphExecutionContext) -> Vec<u8> {
     get_data_from_context(context, 0)
 }
 fn main() {
-        let tokenizer_path = "llama-tokenizer.json";
+        let tokenizer_path = "tokenizer.json";
         let prompt = "Once upon a time, there existed a little girl,";
         let args: Vec<String> = env::args().collect();
         let model_name: &str = &args[1];
