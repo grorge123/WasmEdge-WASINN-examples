@@ -1,5 +1,5 @@
 from transformers import AutoTokenizer, TextStreamer
-from intel_extension_for_transformers.transformers import AutoModelForCausalLM
+#from intel_extension_for_transformers.transformers import AutoModelForCausalLM
 from datetime import datetime
 from neural_speed import Model
 # Specify the GGUF repo on the Hugginface
